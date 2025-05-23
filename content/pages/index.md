@@ -15,17 +15,17 @@ sections:
       📍 University of Waterloo | Computer Science, Honours, Co-op (Minor in Pure Math + Economics) | GPA 87.5 | 2022-2026
       📧 j22han@uwaterloo.ca ｜ 📞 +1 (382)-889-3603
     text: |-
-       <p class='text-xl'>A computer science student passionate about front-end development, backend systems, and AI applications — creating scalable, efficient, and user-centric digital experiences. Through coursework, internships, and personal projects, I’ve worked with a variety of tools and technologies, including:</p>
+       <p class='text-lg'>A computer science student passionate about front-end development, backend systems, and AI applications — creating scalable, efficient, and user-centric digital experiences. Through coursework, internships, and personal projects, I’ve worked with a variety of tools and technologies, including:</p>
        
        <br/>
-       <p class='text-2xl font-bold'>Programming Languages</p>
-       <p class='text-xl mt-2'>C, C++, Python, Java, C#, Racket, SQL, R, HTML/CSS/JavaScript</p>
-       <p class='text-2xl font-bold'>Frontend Development</p>
-       <p class='text-xl mt-2'>Vue.js, React, Next.js, uni-app, Bootstrap, Tailwind, jQuery, Figma, Adobe Photoshop/Illustrator</p>
-        <p class='text-2xl font-bold'>AI & Data Science Libraries</p>
-       <p class='text-xl mt-2'>PyTorch, TensorFlow, NumPy, SciPy, Scikit-Image</p>
-       <p class='text-2xl font-bold'>Tools & Environment</p>
-       <p class='text-xl mt-2'>Unity, Git, Linux, Bash, Jenkins, Gerrit, VS Code, Vim, Microsoft Office (Word, Excel, Outlook, PowerPoint)</p>
+       <p class='text-xl font-bold mt-4'>Programming Languages</p>
+       <p class='text-lg mt-1'>C, C++, Python, Java, C#, Racket, SQL, R, HTML/CSS/JavaScript</p>
+       <p class='text-xl font-bold mt-4'>Frontend Development</p>
+       <p class='text-lg mt-1'>Vue.js, React, Next.js, uni-app, Bootstrap, Tailwind, jQuery, Figma, Adobe Photoshop/Illustrator</p>
+        <p class='text-xl font-bold mt-4'>AI & Data Science Libraries</p>
+       <p class='text-lg mt-1'>PyTorch, TensorFlow, NumPy, SciPy, Scikit-Image</p>
+       <p class='text-xl font-bold mt-4'>Tools & Environment</p>
+       <p class='text-lg mt-1'>Unity, Git, Linux, Bash, Jenkins, Gerrit, VS Code, Vim, Microsoft Office (Word, Excel, Outlook, PowerPoint)</p>
     # media:
     #   title: Title of the video
     #   url: /images/placeholder-video.mp4
@@ -595,12 +595,22 @@ sections:
       self:
         padding:
           - pb-20
-          - pt-20
+          - pt-16
           - pl-16
           - pr-16
         justifyContent: center
       subtitle:
         textAlign: center
+  - title: Divider
+    colors: bg-light-fg-dark
+    styles:
+      self:
+        padding:
+          - pt-7
+          - pl-7
+          - pb-7
+          - pr-7
+    type: DividerSection
   - type: GenericSection
     title:
       text: I'm open to communication in 
