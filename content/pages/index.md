@@ -519,9 +519,11 @@ sections:
           styles:
             self:
               borderRadius: x-large
-      - title: 'I do Enjoy Coding'
+      - title: 'I Love CS'
         text: >-
-          Back in my 2A term, I wasn’t allowed to take CS480 or CS486, so I just… showed up anyway. I sat through every lecture, made friends with some grad students, and even read the AlphaGo paper for fun—which came in handy when I helped one of them with their final assignment. These days, my idea of fun is adding new features to the game I'm developing.
+          I once audited two upper-year AI courses (CS480 & CS486) just because I was curious — and stayed for every lecture. I made friends with some grad students, and even read the AlphaGo paper for fun—which came in handy when I helped one of them with their final assignment. 
+          <br/>
+          These days, my idea of fun is adding new features to the game I'm developing.
         image:
           url: /images/icon2.svg
           altText: Featured icon two
@@ -563,7 +565,7 @@ sections:
             textAlign: left
             justifyContent: center
         type: FeaturedItem
-      - title: 'Someday, I’d like to...'
+      - title: 'Someday, I’d Like to...'
         text: |
           - Write a novel
           - Get good enough at illustration to take commissions
