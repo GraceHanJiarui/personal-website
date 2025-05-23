@@ -1,0 +1,7 @@
+{
+    "favicon": "/images/favicon.svg",
+    "footer": "content/data/footer.json",
+    "defaultSocialImage": "/images/main-hero.jpg",
+    "type": "Config",
+    "header": "content/data/header.json"
+}
