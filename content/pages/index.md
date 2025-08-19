@@ -12,7 +12,7 @@ sections:
       type: TitleBlock
     isLargeTitle: true
     subtitle: |
-      📍 University of Waterloo | Computer Science, Honours, Co-op (Minor in Pure Math + Economics) | GPA 87.5 | 2022-2026
+      📍 University of Waterloo | Computer Science, Honours, Co-op (Minor in Pure Math + Economics) | GPA 86.5/100 (3.7/4.0) | 2022-2026
       📧 j22han@uwaterloo.ca ｜ 📞 +1 (382)-889-3603
     text: |-
        <p class='text-lg'>A computer science student passionate about front-end development, backend systems, and AI applications — creating scalable, efficient, and user-centric digital experiences. Through coursework, internships, and personal projects, I’ve worked with a variety of tools and technologies, including:</p>
@@ -197,12 +197,12 @@ sections:
     items:
       - title: Metroidvania-style RPG Game 
         tagline: 2025.01 – Present
-        subtitle: Indie Unity2D action game built from scratch with a team
+        subtitle: Indie Unity2D action game built from scratch with friends
         text: |
           - Developed core gameplay logic and state machine for 28+ player states
           - Designed 20+ equippable items, 10+ enemy types, and game flow structure
           - Leading team meetings, planning, code architecture and visual design
-          - Demo release planned for Steam in late 2025
+          - Demo release planned for Steam in late 2026
         image:
           url: /images/abstract-feature1.svg
           altText: Placeholder Image
