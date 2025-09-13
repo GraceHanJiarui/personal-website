@@ -1,4 +1,28 @@
 {
+    "secondaryLinks": [
+        {
+            "label": "EN",
+            "altText": "英语",
+            "url": "/",
+            "icon": "arrowRight",
+            "iconPosition": "right",
+            "style": "secondary",
+            "type": "Link"
+        },
+        {
+            "label": " / ",
+            "type": "Text"
+        },
+        {
+            "label": "中文",
+            "altText": "CN",
+            "url": "/",
+            "icon": "arrowRight",
+            "iconPosition": "right",
+            "style": "secondary",
+            "type": "Link"
+        }
+    ],
     "variant": "logo-left-primary-nav-centered",
     "colors": "bg-light-fg-dark",
     "type": "Header"

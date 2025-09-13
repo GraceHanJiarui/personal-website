@@ -5,13 +5,16 @@ import { getComponent } from '../components/components-registry';
 import { resolveStaticProps } from '../utils/static-props-resolvers';
 import { resolveStaticPaths } from '../utils/static-paths-resolvers';
 import { seoGenerateTitle, seoGenerateMetaTags, seoGenerateMetaDescription } from '../utils/seo-utils';
+import { useDeepLocalized } from '../utils/i18n/useDeepLocalized';
 
 function Page(props) {
     const { page, site } = props;
     const { modelName } = page.__metadata;
+    const _page = useDeepLocalized(props.page);
     if (!modelName) {
         throw new Error(`page has no type, page '${props.path}'`);
     }
+    // console.log(typeof modelName.sections[0].title.text);
     const PageLayout = getComponent(modelName);
     if (!PageLayout) {
         throw new Error(`no page layout matching the page model: ${modelName}`);
@@ -34,7 +37,7 @@ function Page(props) {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 {site.favicon && <link rel="icon" href={site.favicon} />}
             </Head>
-            <PageLayout page={page} site={site} />
+            <PageLayout page={_page} site={site} />
         </>
     );
 }

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext, createContext } from 'react';
 import { useRouter } from 'next/router';
 import classNames from 'classnames';
 
@@ -9,9 +9,13 @@ import ImageBlock from '../../blocks/ImageBlock';
 import ChevronDownIcon from '../../svgs/chevron-down';
 import CloseIcon from '../../svgs/close';
 import MenuIcon from '../../svgs/menu';
-
+import LanguageToggle from '../../blocks/LanguageToggle';
+import { useLocale } from '../../../utils/i18n/LocaleProvider';
+/* ---------- 头部 ---------- */
 export default function Header(props) {
     const { colors = 'bg-light-fg-dark', styles = {}, enableAnnotations } = props;
+    const localeState = useLocale();
+
     return (
         <header
             className={classNames(
@@ -32,6 +36,9 @@ export default function Header(props) {
                 </Link>
                 <HeaderVariants {...props} />
             </div>
+            {/* <div className="ml-auto hidden lg:flex">
+                <LanguageToggle />
+            </div> */}
         </header>
     );
 }
@@ -241,6 +248,7 @@ function MobileMenu(props) {
 }
 
 function SiteLogoLink({ title, logo, enableAnnotations }) {
+    const { locale, setLocale } = useLocale();
     return (
         <Link href="/" className="flex items-center">
             {logo && <ImageBlock {...logo} {...(enableAnnotations && { 'data-sb-field-path': 'logo' })} />}
@@ -253,40 +261,91 @@ function SiteLogoLink({ title, logo, enableAnnotations }) {
     );
 }
 
+/* ---------- 语言按钮（NEW） ---------- */
+function LanguageButton({ code, active, inMobileMenu = false, onClick }) {
+    const base = classNames('px-2 py-1 rounded-md text-sm transition-colors whitespace-nowrap', inMobileMenu ? 'w-full text-left' : '');
+    const activeCls = 'bg-gray-900 text-white dark:bg-white dark:text-gray-900';
+    const inactiveCls = 'text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white';
+    return (
+        <button
+            type="button"
+            aria-pressed={active}
+            onClick={onClick}
+            className={classNames(base, active ? activeCls : inactiveCls)}
+        >
+            {code === 'en' ? 'EN' : '中文'}
+        </button>
+    );
+}
+
 function ListOfLinks(props) {
     const { links = [], colors, enableAnnotations, inMobileMenu = false } = props;
+    const { locale, setLocale } = useLocale();
 
     return (
         <>
             {links.map((link, index) => {
-                if (link.__metadata.modelName === 'SubNav') {
+                const isEN = link.label === 'EN';
+                const isZH = link.label === '中文';
+                const isSlash = link.type === 'Text' || (typeof link.label === 'string' && link.label.trim() === '/' || link.label === ' / ');
+
+                // EN / 中文 切换按钮
+                if (isEN || isZH) {
+                    const active = isEN ? locale === 'en' : locale === 'zh';
+                    const code = isEN ? 'en' : 'zh';
+                    return (
+                        <li key={index} className={classNames(inMobileMenu ? 'border-t py-3' : 'py-2')}>
+                            <LanguageButton
+                                code={code}
+                                active={active}
+                                inMobileMenu={inMobileMenu}
+                                onClick={() => setLocale(code)}
+                            />
+                        </li>
+                    );
+                }
+
+                // 中间分隔符
+                if (isSlash) {
+                    return (
+                        <li key={index} className={classNames(inMobileMenu ? 'border-t py-3' : 'py-2')}>
+                            <span className="text-gray-400">{link.label}</span>
+                        </li>
+                    );
+                }
+
+                // 子菜单
+                if (link.__metadata?.modelName === 'SubNav') {
                     return (
                         <LinkWithSubnav
                             key={index}
-                            link={link}
+                            link={{ ...link, label: link.label }}
                             inMobileMenu={inMobileMenu}
                             colors={colors}
                             {...(enableAnnotations && { 'data-sb-field-path': `.${index}` })}
                         />
                     );
-                } else {
-                    return (
-                        <li
-                            key={index}
-                            className={classNames(inMobileMenu ? 'border-t' : 'py-2', {
-                                'py-4': inMobileMenu && link.__metadata.modelName === 'Button'
-                            })}
-                        >
-                            <Action
-                                {...link}
-                                className={classNames('whitespace-nowrap', inMobileMenu ? 'w-full' : 'text-sm', {
-                                    'justify-start py-3': inMobileMenu && link.__metadata.modelName === 'Link'
-                                })}
-                                {...(enableAnnotations && { 'data-sb-field-path': `.${index}` })}
-                            />
-                        </li>
-                    );
                 }
+
+                // 普通链接：把 label/altText 翻译后传给 Action
+                return (
+                    <li
+                        key={index}
+                        className={classNames(inMobileMenu ? 'border-t' : 'py-2', {
+                            'py-4': inMobileMenu && link.__metadata?.modelName === 'Button'
+                        })}
+                    >
+                        <Action
+                            {...link}
+                            label={link.label}
+                            altText={link.altText ?? link.label}
+                            className={classNames('whitespace-nowrap', inMobileMenu ? 'w-full' : 'text-sm', {
+                                'justify-start py-3': inMobileMenu && link.__metadata?.modelName === 'Link'
+                            })}
+                            {...(enableAnnotations && { 'data-sb-field-path': `.${index}` })}
+                        />
+                    </li>
+                );
             })}
         </>
     );
@@ -297,6 +356,7 @@ function LinkWithSubnav(props) {
     const [isSubNavOpen, setIsSubNavOpen] = useState(false);
     const router = useRouter();
     const fieldPath = props['data-sb-field-path'];
+    const { locale } = useLocale();
 
     useEffect(() => {
         const handleRouteChange = () => {
@@ -368,12 +428,15 @@ function LinkWithSubnav(props) {
 }
 
 function ListOfSubNavLinks({ links = [], hasAnnotations, inMobileMenu = false }) {
+    const { locale } = useLocale();
     return (
         <>
             {links.map((link, index) => (
                 <li key={index}>
                     <Action
                         {...link}
+                        label={link.label}
+                        altText={link.altText ?? link.label}
                         className={classNames(inMobileMenu ? 'w-full justify-start' : 'text-sm')}
                         {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })}
                     />
