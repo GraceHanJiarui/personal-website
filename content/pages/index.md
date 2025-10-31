@@ -15,10 +15,10 @@ sections:
     isLargeTitle: true
     subtitle: 
       en: |
-        📍 University of Waterloo | Computer Science, Honours, Co-op (Minor in Pure Math + Economics) | GPA 86.5/100 (3.7/4.0) | 2022-2026
+        📍 University of Waterloo | Computer Science, Honours, Co-op (Minor in Pure Math + Economics) | GPA 86.5/100 (3.7/4.0) | 2022-2027
         📧 j22han@uwaterloo.ca ｜ 📞 +1 (382)-889-3603
       zh: |
-        📍 滑铁卢大学 | 计算机科学（Co-op，本科，辅修纯数+经济）| GPA 86.5/100（3.7/4.0）| 2022-2026
+        📍 滑铁卢大学 | 计算机科学（Co-op，本科，辅修纯数+经济）| GPA 86.5/100（3.7/4.0）| 2022-2027
           📧 j22han@uwaterloo.ca ｜ 📞 +1 (382)-889-3603
     text: 
       en: |-
