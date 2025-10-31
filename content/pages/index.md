@@ -190,7 +190,7 @@ sections:
           zh: 新加坡国立大学 - 系统科学院（新加坡）
         text: 
           en: |
-            - Led full-cycle development of 9+ internal systems based on cross-department requirements
+            - Led full-cycle development of 9+ internal systems based on cross-department requirements with the practice of SDLC.
             - Built web interfaces using Nintex K2, HTML/CSS/JQuery, and managed backend logic with MS SQL
             - Conducted feasibility analysis for automation tools like Power Automate, Selenium, and UIPath in finance operations
           zh: |-
@@ -268,18 +268,19 @@ sections:
           textAlign: left
       type: TitleBlock
     subtitle: 
-      en: Indie Unity2D action game built from scratch with friends | Organizer / Main Developer
+      en: Indie Unity2D action game built from scratch with friends | Organizer / Lead Developer
       zh: 与朋友一起开发 Unity2D 独立游戏｜团队负责人 / 程序
     text:
             # <s> - Developed core gameplay logic and state machine for 28+ player states
         # - Designed 20+ equippable items, 10+ enemy types, and game flow structure
         # - Demo release planned for Steam in late 2026</s>
       en: |-
-        - Leading team meetings, planning, code architecture and visual design
+        - Leading team meetings, planning, code architecture
         - Built core player & enemy state machines and a modular interaction system using interfaces to keep features loosely coupled and extensible.
         - Implemented Celeste-like game-feel systems: input buffering, coyote time, corner boosts, and velocity inheritance; tuned jump/dash/fall velocity curves through playtest-driven iteration. 
         - Shipped rebindable input, checkpoint/respawn, and an extensible interaction suite (moving platforms, dash-passable  tiles, springs, double-dash)
         - Art is greyboxed to highlight engineering. 30-second clip and a lightweight playable build available beside.
+        - <a href="https://www.notion.so/GDD-Game-Planning-Document-29b2599494ee81a593e2ccc6e34ea910?source=copy_link"> Read the Game Design Document (GDD)</a>
       zh: |-
         <ul class="sb-markdown mt-4">
           <li>构建玩家与敌人的<strong>状态机</strong>和<strong>模块化交互系统</strong>（接口解耦），支持快速扩展新能力/敌人与玩法。</li>
