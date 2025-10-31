@@ -257,114 +257,183 @@ sections:
     type: FeaturedItemsSection
   # end of big list (work experience)
   # start of project part
-  # start of big list
-  - title:
+  - type: GenericSection
+    title:
       text: 
         en: Projects I am Currently Working on
         zh: 正在开发的项目
-      color: text-primary
+      color: text-dark
       styles:
         self:
-          textAlign: center
+          textAlign: left
       type: TitleBlock
-    # subtitle: Projects currently working on
-    items:
-      - title: 
-          en: Metroidvania-style RPG Game 
-          zh: 类银河恶魔城 RPG
-        tagline: 
-          en: 2025.01 – Present
-          zh: 2025.01 – 至今
-        subtitle: 
-          en: Indie Unity2D action game built from scratch with friends
-          zh: 与朋友一起开发 Unity2D 独立游戏｜团队负责人 / 程序
-        text: 
-          en: |
-            - Developed core gameplay logic and state machine for 28+ player states
-            - Designed 20+ equippable items, 10+ enemy types, and game flow structure
-            - Leading team meetings, planning, code architecture and visual design
-            - Demo release planned for Steam in late 2026
-          zh: |-
-            <ul class="sb-markdown mt-4">
-              <li>构建玩家与敌人的<strong>状态机</strong>和<strong>模块化交互系统</strong>（接口解耦），支持快速扩展新能力/敌人与玩法。</li>
-              <li>实现“类 Celeste”<strong>手感系统</strong>：输入缓冲、<strong>Coyote Time（空中容错）</strong>、<strong>Corner Boost（角落提速）</strong>、<strong>Velocity Inheritance（速度继承）</strong>；基于多轮试玩持续调优<strong>跳跃/冲刺/下落速度曲线</strong>。</li>
-              <li>上线可重绑定输入、检查点/重生，并提供可扩展交互组件（移动平台、可冲刺穿越砖块、弹簧、二段冲刺等）。</li>
-              <li>主导<strong>架构设计与迭代节奏</strong>；组织团队会议，编写关卡/内容；<strong>目标</strong>：预计<strong>2026 年</strong>发布 Steam 公开 Demo。</li>
-            </ul>
-            <p class="text-m text-gray-600">技术栈：Unity2D、PlasticSCM、C#、ScriptableObject、事件/状态模式、协程</p>
-        image:
-          url: /images/abstract-feature1.svg
-          altText: Placeholder Image
-          styles:
-            self:
-              borderRadius: x-large
-          type: ImageBlock
-        colors: bg-light-fg-dark
-        styles:
-          self:
-            padding:
-              - pt-8
-              - pl-8
-              - pb-8
-              - pr-8
-            borderRadius: x-large
-            flexDirection: row
-        type: FeaturedItem
-      - title: 
-          en: Cross-Platform To-Do App
-          zh: 跨平台 To-Do 应用
-        tagline: 
-          en: 2021.08 – Present, developed intermittently
-          zh: 2021.08 – 至今（间歇开发）
-        subtitle: 
-          en: Time-management mobile app built with Vue.js + uni-app
-          zh: 使用 Vue.js + uni-app 写的时间管理工具｜长期个人项目
-        text: 
-          en: |
-            - Built a time-management mobile app using Vue.js and uni-app, developed intermittently since 2021 as a long-term side project
-            - Supports quadrant-based task prioritization, Pomodoro timer, calendars, recurring events, and reward system
-            - Implemented Vuex for efficient state management and lightweight backend logic
-          zh: |-
-            <ul class="sb-markdown mt-4">
-              <li>基于 Vue.js + uni-app 开发多端时间管理应用，持续迭代中。</li>
-              <li>实现四象限优先级、番茄钟、日历/重复事件、奖励体系等功能。</li>
-              <li>使用 Vuex 做全局状态管理，封装轻量后端逻辑，优化组件通信与路由。</li>
-            </ul>
-            <p class="text-m text-gray-600">技术栈：Vue.js、uni-app、Vuex、HTML/CSS/JavaScript、Git</p>
-            <p class="text-lg mt-1 font-bold text-center">
-              --- 中文内容施工中…… ---</p>
-            <p class="text-sm mt-1 font-bold text-center">
-              （等我有时间继续补中文翻译）</p>
-        image:
-          url: /images/abstract-feature2.svg
-          altText: Placeholder image
-          styles:
-            self:
-              borderRadius: x-large
-          type: ImageBlock
-        colors: bg-light-fg-dark
-        styles:
-          self:
-            padding:
-              - pt-8
-              - pl-8
-              - pb-8
-              - pr-8
-            borderRadius: x-large
-            flexDirection: row
-        type: FeaturedItem
-    variant: big-list
+    subtitle: 
+      en: Indie Unity2D action game built from scratch with friends | Organizer / Main Developer
+      zh: 与朋友一起开发 Unity2D 独立游戏｜团队负责人 / 程序
+    text:
+            # <s> - Developed core gameplay logic and state machine for 28+ player states
+        # - Designed 20+ equippable items, 10+ enemy types, and game flow structure
+        # - Demo release planned for Steam in late 2026</s>
+      en: |-
+        - Leading team meetings, planning, code architecture and visual design
+        - Built core player & enemy state machines and a modular interaction system using interfaces to keep features loosely coupled and extensible.
+        - Implemented Celeste-like game-feel systems: input buffering, coyote time, corner boosts, and velocity inheritance; tuned jump/dash/fall velocity curves through playtest-driven iteration. 
+        - Shipped rebindable input, checkpoint/respawn, and an extensible interaction suite (moving platforms, dash-passable  tiles, springs, double-dash)
+        - Art is greyboxed to highlight engineering. 30-second clip and a lightweight playable build available beside.
+      zh: |-
+        <ul class="sb-markdown mt-4">
+          <li>构建玩家与敌人的<strong>状态机</strong>和<strong>模块化交互系统</strong>（接口解耦），支持快速扩展新能力/敌人与玩法。</li>
+          <li>实现“类 Celeste”<strong>手感系统</strong>：输入缓冲、<strong>Coyote Time（空中容错）</strong>、<strong>Corner Boost（角落提速）</strong>、<strong>Velocity Inheritance（速度继承）</strong>；基于多轮试玩持续调优<strong>跳跃/冲刺/下落速度曲线</strong>。</li>
+          <li>上线可重绑定输入、检查点/重生，并提供可扩展交互组件（移动平台、可冲刺穿越砖块、弹簧、二段冲刺等）。</li>
+          <li>主导<strong>架构设计与迭代节奏</strong>；组织团队会议，编写关卡/内容；<strong>目标</strong>：预计<strong>2026 年</strong>发布 Steam 公开 Demo。</li>
+        </ul>
+        <p class="text-m text-gray-600">技术栈：Unity2D、PlasticSCM、C#、ScriptableObject、事件/状态模式、协程</p>
+    actions: []
+    media:
+      title: Title of the video
+      url: /images/game.mp4
+      autoplay: true
+      loop: true
+      muted: true
+      controls: false
+      aspectRatio: '16:9'
+      styles:
+        self:
+          padding:
+            - pt-2
+            - pb-2
+            - pl-2
+            - pr-2
+          borderColor: border-dark
+          borderStyle: solid
+          borderWidth: 1
+          borderRadius: large
+      type: VideoBlock
+    elementId: game
     colors: bg-neutral-fg-dark
     styles:
       self:
-        padding:
-          - pt-20
-          - pl-8
-          - pr-8
+        flexDirection: row
         justifyContent: center
       subtitle:
-        textAlign: center
-    type: FeaturedItemsSection
+        textAlign: left
+  # start of big list
+  # - title:
+  #     text: 
+  #       en: Projects I am Currently Working on
+  #       zh: 正在开发的项目
+  #     color: text-primary
+  #     styles:
+  #       self:
+  #         textAlign: center
+  #     type: TitleBlock
+  #   # subtitle: Projects currently working on
+  #   items:
+  #     - title: 
+  #         en: Metroidvania-style RPG Game 
+  #         zh: 类银河恶魔城 RPG
+  #       tagline: 
+  #         en: 2025.01 – Present
+  #         zh: 2025.01 – 至今
+  #       subtitle: 
+  #         en: Indie Unity2D action game built from scratch with friends
+  #         zh: 与朋友一起开发 Unity2D 独立游戏｜团队负责人 / 程序
+  #       text: 
+  #         en: |-
+  #           <s> - Developed core gameplay logic and state machine for 28+ player states
+  #           - Designed 20+ equippable items, 10+ enemy types, and game flow structure
+  #           - Leading team meetings, planning, code architecture and visual design
+  #           - Demo release planned for Steam in late 2026</s>
+  #           - Built core player & enemy state machines and a modular interaction system using interfaces to keep features loosely coupled and extensible.
+  #           - Implemented Celeste-like game-feel systems: input buffering, coyote time, corner boosts, and velocity inheritance; tuned jump/dash/fall velocity curves through playtest-driven iteration. 
+  #           - Shipped rebindable input, checkpoint/respawn, and an extensible interaction suite (moving platforms, dash-passable  tiles, springs, double-dash)
+  #         zh: |-
+  #           <ul class="sb-markdown mt-4">
+  #             <li>构建玩家与敌人的<strong>状态机</strong>和<strong>模块化交互系统</strong>（接口解耦），支持快速扩展新能力/敌人与玩法。</li>
+  #             <li>实现“类 Celeste”<strong>手感系统</strong>：输入缓冲、<strong>Coyote Time（空中容错）</strong>、<strong>Corner Boost（角落提速）</strong>、<strong>Velocity Inheritance（速度继承）</strong>；基于多轮试玩持续调优<strong>跳跃/冲刺/下落速度曲线</strong>。</li>
+  #             <li>上线可重绑定输入、检查点/重生，并提供可扩展交互组件（移动平台、可冲刺穿越砖块、弹簧、二段冲刺等）。</li>
+  #             <li>主导<strong>架构设计与迭代节奏</strong>；组织团队会议，编写关卡/内容；<strong>目标</strong>：预计<strong>2026 年</strong>发布 Steam 公开 Demo。</li>
+  #           </ul>
+  #           <p class="text-m text-gray-600">技术栈：Unity2D、PlasticSCM、C#、ScriptableObject、事件/状态模式、协程</p>
+  #       media:
+  #         url: /images/game.mp4
+  #         controls: false
+  #         aspectRatio: '16:9'
+  #         styles:
+  #           self:
+  #             borderRadius: x-large
+  #         type: VideoBlock
+  #         autoplay: true
+  #         loop: true
+  #         muted: true
+  #       # colors: bg-light-fg-dark
+  #       styles:
+  #         self:
+  #           padding:
+  #             - pt-2
+  #             - pb-2
+  #             - pl-2
+  #             - pr-2
+  #         borderColor: border-dark
+  #         borderStyle: solid
+  #         borderWidth: 1
+  #         borderRadius: large
+  #       type: FeaturedItem
+  #     - title: 
+  #         en: Cross-Platform To-Do App
+  #         zh: 跨平台 To-Do 应用
+  #       tagline: 
+  #         en: 2021.08 – Present, developed intermittently
+  #         zh: 2021.08 – 至今（间歇开发）
+  #       subtitle: 
+  #         en: Time-management mobile app built with Vue.js + uni-app
+  #         zh: 使用 Vue.js + uni-app 写的时间管理工具｜长期个人项目
+  #       text: 
+  #         en: |
+  #           - Built a time-management mobile app using Vue.js and uni-app, developed intermittently since 2021 as a long-term side project
+  #           - Supports quadrant-based task prioritization, Pomodoro timer, calendars, recurring events, and reward system
+  #           - Implemented Vuex for efficient state management and lightweight backend logic
+  #         zh: |-
+  #           <ul class="sb-markdown mt-4">
+  #             <li>基于 Vue.js + uni-app 开发多端时间管理应用，持续迭代中。</li>
+  #             <li>实现四象限优先级、番茄钟、日历/重复事件、奖励体系等功能。</li>
+  #             <li>使用 Vuex 做全局状态管理，封装轻量后端逻辑，优化组件通信与路由。</li>
+  #           </ul>
+  #           <p class="text-m text-gray-600">技术栈：Vue.js、uni-app、Vuex、HTML/CSS/JavaScript、Git</p>
+  #           <p class="text-lg mt-1 font-bold text-center">
+  #             --- 中文内容施工中…… ---</p>
+  #           <p class="text-sm mt-1 font-bold text-center">
+  #             （等我有时间继续补中文翻译）</p>
+  #       image:
+  #         url: /images/abstract-feature2.svg
+  #         altText: Placeholder image
+  #         styles:
+  #           self:
+  #             borderRadius: x-large
+  #         type: ImageBlock
+  #       colors: bg-light-fg-dark
+  #       styles:
+  #         self:
+  #           padding:
+  #             - pt-8
+  #             - pl-8
+  #             - pb-8
+  #             - pr-8
+  #           borderRadius: x-large
+  #           flexDirection: row
+  #       type: FeaturedItem
+  #   variant: big-list
+  #   colors: bg-neutral-fg-dark
+  #   styles:
+  #     self:
+  #       padding:
+  #         - pt-20
+  #         - pl-8
+  #         - pr-8
+  #       justifyContent: center
+  #     subtitle:
+  #       textAlign: center
+  #   type: FeaturedItemsSection
   # end of big list
   # start of three-col-grid (part 1)
   - title:
@@ -745,424 +814,425 @@ sections:
         justifyContent: center
       subtitle:
         textAlign: center
+        ############################################
+  - title:
+      text: Jiarui Han
+      color: text-dark
+      styles:
+        self:
+          textAlign: center
+      type: TitleBlock
+    subtitle: |
+      📍 University of Waterloo | Computer Science, Honours, Co-op (Minor in Pure Math + Economics) | GPA 87.5 | 2022-2026
+      📧 j22han@uwaterloo.ca ｜ 📞 +1 (382)-889-3603
+    text: |-
+       “A computer science student passionate about front-end development, backend systems, and AI applications — creating scalable, efficient, and user-centric digital experiences.”
+    media:
+      title: Title of the video
+      url: /images/placeholder-video.mp4
+      controls: false
+      aspectRatio: '16:9'
+      styles:
+        self:
+          padding:
+            - pt-2
+            - pb-2
+            - pl-2
+            - pr-2
+          borderColor: border-dark
+          borderStyle: solid
+          borderWidth: 1
+          borderRadius: large
+      type: VideoBlock
+      autoplay: true
+      loop: true
+      muted: true
+    badge:
+      label: Key Benefits
+      color: text-primary
+      styles:
+        self:
+          textAlign: center
+      type: Badge
+    colors: bg-light-fg-dark
+    styles:
+      self:
+        flexDirection: col
+        justifyContent: center
+      subtitle:
+        textAlign: center
+    type: GenericSection
+  - title: Divider
+    colors: bg-light-fg-dark
+    styles:
+      self:
+        padding:
+          - pt-7
+          - pl-7
+          - pb-7
+          - pr-7
+    type: DividerSection
+  - type: CarouselSection
+    title: null
+    subtitle: What our customers say about us
+    items:
+      - title: >-
+          “A designer knows he has achieved perfection not when there is nothing
+          left to add, but when there is nothing left to take away.”
+        tagline: Testimonial 1
+        subtitle: 'Maria Walters, Company'
+        text: >-
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
+          explicabo.
+        image:
+          url: /images/person-placeholder-light.png
+          altText: Maria Walters
+          styles:
+            self:
+              borderRadius: full
+          type: ImageBlock
+        actions: []
+        colors: bg-neutralAlt-fg-dark
+        styles:
+          self:
+            padding:
+              - pt-9
+              - pb-9
+              - pl-9
+              - pr-9
+            textAlign: left
+            borderRadius: large
+            flexDirection: row
+            justifyContent: center
+        type: FeaturedItem
+      - title: >-
+          "Design is a plan for arranging elements in such a way as best to accomplish a particular purpose."
+        tagline: Testimonial 2
+        subtitle: 'John Doe, Company'
+        text: >-
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
+          explicabo.
+        image:
+          url: /images/person-placeholder-light.png
+          altText: John Doe
+          styles:
+            self:
+              borderRadius: full
+          type: ImageBlock
+        actions: []
+        colors: bg-neutralAlt-fg-dark
+        styles:
+          self:
+            padding:
+              - pt-9
+              - pb-9
+              - pl-9
+              - pr-9
+            textAlign: left
+            borderRadius: large
+            flexDirection: row
+            justifyContent: center
+        type: FeaturedItem
+      - title: >-
+          "Design is how it works, how it functions. Good design doesn't just make a product aesthetically pleasing, it makes it a pleasure to use."
+        tagline: Testimonial 3
+        subtitle: 'Maria Walters, Company'
+        text: >-
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
+          explicabo.
+        image:
+          url: /images/person-placeholder-light.png
+          altText: Maria Walters
+          styles:
+            self:
+              borderRadius: full
+          type: ImageBlock
+        actions: []
+        colors: bg-neutralAlt-fg-dark
+        styles:
+          self:
+            padding:
+              - pt-9
+              - pb-9
+              - pl-9
+              - pr-9
+            textAlign: left
+            borderRadius: large
+            flexDirection: row
+            justifyContent: center
+        type: FeaturedItem
+      - title: >-
+          “A designer knows he has achieved perfection not when there is nothing
+          left to add, but when there is nothing left to take away.”
+        tagline: Testimonial 4
+        subtitle: 'Maria Walters, Company'
+        text: >-
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
+          explicabo.
+        image:
+          url: /images/person-placeholder-light.png
+          altText: Maria Walters
+          styles:
+            self:
+              borderRadius: full
+          type: ImageBlock
+        actions: []
+        colors: bg-neutralAlt-fg-dark
+        styles:
+          self:
+            padding:
+              - pt-9
+              - pb-9
+              - pl-9
+              - pr-9
+            textAlign: left
+            borderRadius: large
+            flexDirection: row
+            justifyContent: center
+        type: FeaturedItem
+      - title: >-
+          "Design can be art. Design can be aesthetics. Design is so simple, that's why it is so complicated."
+        tagline: Testimonial 5
+        subtitle: 'Jane Walters, Company'
+        text: >-
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
+          explicabo.
+        image:
+          url: /images/person-placeholder-light.png
+          altText: Maria Walters
+          styles:
+            self:
+              borderRadius: full
+          type: ImageBlock
+        actions: []
+        colors: bg-neutralAlt-fg-dark
+        styles:
+          self:
+            padding:
+              - pt-9
+              - pb-9
+              - pl-9
+              - pr-9
+            textAlign: left
+            borderRadius: large
+            flexDirection: row
+            justifyContent: center
+        type: FeaturedItem
+      - title: >-
+          “Quote from some important person goes right here. I love using Netlify Create.”
+        tagline: Testimonial 6
+        subtitle: 'Jane Doe, Company'
+        text: >-
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
+          explicabo.
+        image:
+          url: /images/img-placeholder-dark.png
+          altText: Jane Doe
+          styles:
+            self:
+              borderRadius: full
+          type: ImageBlock
+        actions: []
+        colors: bg-dark-fg-light
+        styles:
+          self:
+            padding:
+              - pt-9
+              - pb-9
+              - pl-9
+              - pr-9
+            textAlign: left
+            borderRadius: large
+            flexDirection: row
+            justifyContent: center
+        type: FeaturedItem
+    elementId: null
+    variant: next-prev-nav
+    colors: bg-light-fg-dark
+    styles:
+      self:
+        justifyContent: center
+      subtitle:
+        textAlign: center
+  - type: GenericSection
+    title:
+      text: Project 1
+      color: text-dark
+      styles:
+        self:
+          textAlign: left
+      type: TitleBlock
+    subtitle: project 1 uses languages
+    text: |-
+      Aenean eros ipsum, interdum quis dignissim non, sollicitudin vitae nisl.
+      Aenean vel aliquet elit, at blandit ipsum. Sed eleifend felis sit amet
+      erat molestie, hendrerit malesuada justo ultrices. Nunc volutpat at erat
+      vitae interdum. Ut nec massa eget lorem blandit condimentum et at risus.
+    actions: []
+    media:
+      title: Title of the video
+      url: /images/placeholder-video.mp4
+      autoplay: true
+      loop: true
+      muted: true
+      controls: false
+      aspectRatio: '16:9'
+      styles:
+        self:
+          padding:
+            - pt-2
+            - pb-2
+            - pl-2
+            - pr-2
+          borderColor: border-dark
+          borderStyle: solid
+          borderWidth: 1
+          borderRadius: large
+      type: VideoBlock
+    elementId: null
+    colors: bg-neutral-fg-dark
+    styles:
+      self:
+        flexDirection: row
+        justifyContent: center
+      subtitle:
+        textAlign: left
+  - title:
+      text: Social Media Management
+      color: text-dark
+      type: TitleBlock
+    subtitle: Increase your reach
+    text: >
+      A service that helps businesses to manage their social media accounts and
+      posts.
+    actions:
+      - label: Get started
+        url: /
+        icon: arrowRight
+        iconPosition: right
+        style: secondary
+        type: Button
+      - label: See Tutorials
+        url: /
+        showIcon: true
+        icon: arrowRight
+        iconPosition: right
+        style: primary
+        type: Link
+    media:
+      url: /images/hero2.svg
+      altText: Fun feature preview
+      type: ImageBlock
+    badge:
+      label: This is a badge
+      color: text-primary
+      type: Badge
+    colors: bg-neutral-fg-dark
+    styles:
+      self:
+        alignItems: center
+    type: GenericSection
+  - title:
+      text: Business Consulting
+      color: text-dark
+      type: TitleBlock
+    subtitle: Be in good company
+    text: >
+      A service that provides advice and guidance to startups and small
+      businesses.
+    actions:
+      - label: Get started
+        url: /
+        icon: arrowRight
+        iconPosition: right
+        style: secondary
+        type: Button
+      - label: See Tutorials
+        url: /
+        showIcon: true
+        icon: arrowRight
+        iconPosition: right
+        style: primary
+        type: Link
+    media:
+      url: /images/hero3.svg
+      altText: Dope design preview
+      type: ImageBlock
+    badge:
+      label: This is a badge
+      color: text-primary
+      type: Badge
+    colors: bg-neutral-fg-dark
+    styles:
+      self:
+        alignItems: center
+        flexDirection: row-reverse
+    type: GenericSection
   # - title:
-  #     text: Jiarui Han
+  #     text: Generic Section With A Form
   #     color: text-dark
-  #     styles:
-  #       self:
-  #         textAlign: center
   #     type: TitleBlock
-  #   subtitle: |
-  #     📍 University of Waterloo | Computer Science, Honours, Co-op (Minor in Pure Math + Economics) | GPA 87.5 | 2022-2026
-  #     📧 j22han@uwaterloo.ca ｜ 📞 +1 (382)-889-3603
-  #   text: |-
-  #      “A computer science student passionate about front-end development, backend systems, and AI applications — creating scalable, efficient, and user-centric digital experiences.”
-  #   media:
-  #     title: Title of the video
-  #     url: /images/placeholder-video.mp4
-  #     controls: false
-  #     aspectRatio: '16:9'
-  #     styles:
-  #       self:
-  #         padding:
-  #           - pt-2
-  #           - pb-2
-  #           - pl-2
-  #           - pr-2
-  #         borderColor: border-dark
-  #         borderStyle: solid
-  #         borderWidth: 1
-  #         borderRadius: large
-  #     type: VideoBlock
-  #     autoplay: true
-  #     loop: true
-  #     muted: true
-  #   badge:
-  #     label: Key Benefits
-  #     color: text-primary
-  #     styles:
-  #       self:
-  #         textAlign: center
-  #     type: Badge
-  #   colors: bg-light-fg-dark
-  #   styles:
-  #     self:
-  #       flexDirection: col
-  #       justifyContent: center
-  #     subtitle:
-  #       textAlign: center
-  #   type: GenericSection
-  # - title: Divider
-  #   colors: bg-light-fg-dark
-  #   styles:
-  #     self:
-  #       padding:
-  #         - pt-7
-  #         - pl-7
-  #         - pb-7
-  #         - pr-7
-  #   type: DividerSection
-  # - type: CarouselSection
-  #   title: null
-  #   subtitle: What our customers say about us
-  #   items:
-  #     - title: >-
-  #         “A designer knows he has achieved perfection not when there is nothing
-  #         left to add, but when there is nothing left to take away.”
-  #       tagline: Testimonial 1
-  #       subtitle: 'Maria Walters, Company'
-  #       text: >-
-  #         Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-  #         accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-  #         explicabo.
-  #       image:
-  #         url: /images/person-placeholder-light.png
-  #         altText: Maria Walters
-  #         styles:
-  #           self:
-  #             borderRadius: full
-  #         type: ImageBlock
-  #       actions: []
-  #       colors: bg-neutralAlt-fg-dark
-  #       styles:
-  #         self:
-  #           padding:
-  #             - pt-9
-  #             - pb-9
-  #             - pl-9
-  #             - pr-9
-  #           textAlign: left
-  #           borderRadius: large
-  #           flexDirection: row
-  #           justifyContent: center
-  #       type: FeaturedItem
-  #     - title: >-
-  #         "Design is a plan for arranging elements in such a way as best to accomplish a particular purpose."
-  #       tagline: Testimonial 2
-  #       subtitle: 'John Doe, Company'
-  #       text: >-
-  #         Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-  #         accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-  #         explicabo.
-  #       image:
-  #         url: /images/person-placeholder-light.png
-  #         altText: John Doe
-  #         styles:
-  #           self:
-  #             borderRadius: full
-  #         type: ImageBlock
-  #       actions: []
-  #       colors: bg-neutralAlt-fg-dark
-  #       styles:
-  #         self:
-  #           padding:
-  #             - pt-9
-  #             - pb-9
-  #             - pl-9
-  #             - pr-9
-  #           textAlign: left
-  #           borderRadius: large
-  #           flexDirection: row
-  #           justifyContent: center
-  #       type: FeaturedItem
-  #     - title: >-
-  #         "Design is how it works, how it functions. Good design doesn't just make a product aesthetically pleasing, it makes it a pleasure to use."
-  #       tagline: Testimonial 3
-  #       subtitle: 'Maria Walters, Company'
-  #       text: >-
-  #         Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-  #         accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-  #         explicabo.
-  #       image:
-  #         url: /images/person-placeholder-light.png
-  #         altText: Maria Walters
-  #         styles:
-  #           self:
-  #             borderRadius: full
-  #         type: ImageBlock
-  #       actions: []
-  #       colors: bg-neutralAlt-fg-dark
-  #       styles:
-  #         self:
-  #           padding:
-  #             - pt-9
-  #             - pb-9
-  #             - pl-9
-  #             - pr-9
-  #           textAlign: left
-  #           borderRadius: large
-  #           flexDirection: row
-  #           justifyContent: center
-  #       type: FeaturedItem
-  #     - title: >-
-  #         “A designer knows he has achieved perfection not when there is nothing
-  #         left to add, but when there is nothing left to take away.”
-  #       tagline: Testimonial 4
-  #       subtitle: 'Maria Walters, Company'
-  #       text: >-
-  #         Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-  #         accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-  #         explicabo.
-  #       image:
-  #         url: /images/person-placeholder-light.png
-  #         altText: Maria Walters
-  #         styles:
-  #           self:
-  #             borderRadius: full
-  #         type: ImageBlock
-  #       actions: []
-  #       colors: bg-neutralAlt-fg-dark
-  #       styles:
-  #         self:
-  #           padding:
-  #             - pt-9
-  #             - pb-9
-  #             - pl-9
-  #             - pr-9
-  #           textAlign: left
-  #           borderRadius: large
-  #           flexDirection: row
-  #           justifyContent: center
-  #       type: FeaturedItem
-  #     - title: >-
-  #         "Design can be art. Design can be aesthetics. Design is so simple, that's why it is so complicated."
-  #       tagline: Testimonial 5
-  #       subtitle: 'Jane Walters, Company'
-  #       text: >-
-  #         Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-  #         accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-  #         explicabo.
-  #       image:
-  #         url: /images/person-placeholder-light.png
-  #         altText: Maria Walters
-  #         styles:
-  #           self:
-  #             borderRadius: full
-  #         type: ImageBlock
-  #       actions: []
-  #       colors: bg-neutralAlt-fg-dark
-  #       styles:
-  #         self:
-  #           padding:
-  #             - pt-9
-  #             - pb-9
-  #             - pl-9
-  #             - pr-9
-  #           textAlign: left
-  #           borderRadius: large
-  #           flexDirection: row
-  #           justifyContent: center
-  #       type: FeaturedItem
-  #     - title: >-
-  #         “Quote from some important person goes right here. I love using Netlify Create.”
-  #       tagline: Testimonial 6
-  #       subtitle: 'Jane Doe, Company'
-  #       text: >-
-  #         Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-  #         accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-  #         explicabo.
-  #       image:
-  #         url: /images/img-placeholder-dark.png
-  #         altText: Jane Doe
-  #         styles:
-  #           self:
-  #             borderRadius: full
-  #         type: ImageBlock
-  #       actions: []
-  #       colors: bg-dark-fg-light
-  #       styles:
-  #         self:
-  #           padding:
-  #             - pt-9
-  #             - pb-9
-  #             - pl-9
-  #             - pr-9
-  #           textAlign: left
-  #           borderRadius: large
-  #           flexDirection: row
-  #           justifyContent: center
-  #       type: FeaturedItem
-  #   elementId: null
-  #   variant: next-prev-nav
-  #   colors: bg-light-fg-dark
-  #   styles:
-  #     self:
-  #       justifyContent: center
-  #     subtitle:
-  #       textAlign: center
-  # - type: GenericSection
-  #   title:
-  #     text: Project 1
-  #     color: text-dark
-  #     styles:
-  #       self:
-  #         textAlign: left
-  #     type: TitleBlock
-  #   subtitle: project 1 uses languages
+  #   subtitle: Section with a form subtitle
   #   text: |-
   #     Aenean eros ipsum, interdum quis dignissim non, sollicitudin vitae nisl.
   #     Aenean vel aliquet elit, at blandit ipsum. Sed eleifend felis sit amet
   #     erat molestie, hendrerit malesuada justo ultrices. Nunc volutpat at erat
   #     vitae interdum. Ut nec massa eget lorem blandit condimentum et at risus.
-  #   actions: []
   #   media:
-  #     title: Title of the video
-  #     url: /images/placeholder-video.mp4
-  #     autoplay: true
-  #     loop: true
-  #     muted: true
-  #     controls: false
-  #     aspectRatio: '16:9'
+  #     fields:
+  #       - name: name
+  #         label: Name
+  #         hideLabel: true
+  #         placeholder: Your name
+  #         isRequired: true
+  #         width: full
+  #         type: TextFormControl
+  #       - name: email
+  #         label: Email
+  #         hideLabel: true
+  #         placeholder: Your email
+  #         isRequired: true
+  #         width: full
+  #         type: EmailFormControl
+  #       - name: message
+  #         label: Message
+  #         hideLabel: true
+  #         placeholder: Your message
+  #         width: full
+  #         type: TextareaFormControl
+  #     elementId: contact-form
   #     styles:
   #       self:
   #         padding:
-  #           - pt-2
-  #           - pb-2
-  #           - pl-2
-  #           - pr-2
+  #           - pt-6
+  #           - pb-6
+  #           - pl-6
+  #           - pr-6
   #         borderColor: border-dark
   #         borderStyle: solid
   #         borderWidth: 1
   #         borderRadius: large
-  #     type: VideoBlock
-  #   elementId: null
-  #   colors: bg-neutral-fg-dark
-  #   styles:
-  #     self:
-  #       flexDirection: row
-  #       justifyContent: center
-  #     subtitle:
-  #       textAlign: left
-  # - title:
-  #     text: Social Media Management
-  #     color: text-dark
-  #     type: TitleBlock
-  #   subtitle: Increase your reach
-  #   text: >
-  #     A service that helps businesses to manage their social media accounts and
-  #     posts.
-  #   actions:
-  #     - label: Get started
-  #       url: /
-  #       icon: arrowRight
-  #       iconPosition: right
-  #       style: secondary
-  #       type: Button
-  #     - label: See Tutorials
-  #       url: /
-  #       showIcon: true
+  #     type: FormBlock
+  #     submitButton:
+  #       type: SubmitButtonFormControl
+  #       label: Submit
+  #       showIcon: false
   #       icon: arrowRight
   #       iconPosition: right
   #       style: primary
-  #       type: Link
-  #   media:
-  #     url: /images/hero2.svg
-  #     altText: Fun feature preview
-  #     type: ImageBlock
+  #       elementId: null
   #   badge:
-  #     label: This is a badge
+  #     label: Contact Us
   #     color: text-primary
   #     type: Badge
-  #   colors: bg-neutral-fg-dark
-  #   styles:
-  #     self:
-  #       alignItems: center
+  #   colors: bg-light-fg-dark
   #   type: GenericSection
-  # - title:
-  #     text: Business Consulting
-  #     color: text-dark
-  #     type: TitleBlock
-  #   subtitle: Be in good company
-  #   text: >
-  #     A service that provides advice and guidance to startups and small
-  #     businesses.
-  #   actions:
-  #     - label: Get started
-  #       url: /
-  #       icon: arrowRight
-  #       iconPosition: right
-  #       style: secondary
-  #       type: Button
-  #     - label: See Tutorials
-  #       url: /
-  #       showIcon: true
-  #       icon: arrowRight
-  #       iconPosition: right
-  #       style: primary
-  #       type: Link
-  #   media:
-  #     url: /images/hero3.svg
-  #     altText: Dope design preview
-  #     type: ImageBlock
-  #   badge:
-  #     label: This is a badge
-  #     color: text-primary
-  #     type: Badge
-  #   colors: bg-neutral-fg-dark
-  #   styles:
-  #     self:
-  #       alignItems: center
-  #       flexDirection: row-reverse
-  #   type: GenericSection
-  # # - title:
-  # #     text: Generic Section With A Form
-  # #     color: text-dark
-  # #     type: TitleBlock
-  # #   subtitle: Section with a form subtitle
-  # #   text: |-
-  # #     Aenean eros ipsum, interdum quis dignissim non, sollicitudin vitae nisl.
-  # #     Aenean vel aliquet elit, at blandit ipsum. Sed eleifend felis sit amet
-  # #     erat molestie, hendrerit malesuada justo ultrices. Nunc volutpat at erat
-  # #     vitae interdum. Ut nec massa eget lorem blandit condimentum et at risus.
-  # #   media:
-  # #     fields:
-  # #       - name: name
-  # #         label: Name
-  # #         hideLabel: true
-  # #         placeholder: Your name
-  # #         isRequired: true
-  # #         width: full
-  # #         type: TextFormControl
-  # #       - name: email
-  # #         label: Email
-  # #         hideLabel: true
-  # #         placeholder: Your email
-  # #         isRequired: true
-  # #         width: full
-  # #         type: EmailFormControl
-  # #       - name: message
-  # #         label: Message
-  # #         hideLabel: true
-  # #         placeholder: Your message
-  # #         width: full
-  # #         type: TextareaFormControl
-  # #     elementId: contact-form
-  # #     styles:
-  # #       self:
-  # #         padding:
-  # #           - pt-6
-  # #           - pb-6
-  # #           - pl-6
-  # #           - pr-6
-  # #         borderColor: border-dark
-  # #         borderStyle: solid
-  # #         borderWidth: 1
-  # #         borderRadius: large
-  # #     type: FormBlock
-  # #     submitButton:
-  # #       type: SubmitButtonFormControl
-  # #       label: Submit
-  # #       showIcon: false
-  # #       icon: arrowRight
-  # #       iconPosition: right
-  # #       style: primary
-  # #       elementId: null
-  # #   badge:
-  # #     label: Contact Us
-  # #     color: text-primary
-  # #     type: Badge
-  # #   colors: bg-light-fg-dark
-  # #   type: GenericSection
 seo:
   metaTitle: Jiarui's Website
   metaDescription: This demo site is built with Netlify Create.
