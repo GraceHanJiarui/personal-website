@@ -19,6 +19,7 @@ export default function VideoBlock(props) {
                 'sb-component-block',
                 'sb-component-video-block',
                 'w-full',
+                'inline-block',
                 className,
                 styles?.self?.padding ? mapStyles({ padding: styles?.self?.padding }) : undefined,
                 styles?.self?.margin ? mapStyles({ margin: styles?.self?.margin }) : undefined,
@@ -34,20 +35,22 @@ export default function VideoBlock(props) {
             {...annotations}
         >
             <div
-                className={classNames(
-                    styles?.self?.borderRadius ? mapStyles({ borderRadius: styles?.self?.borderRadius }) : undefined,
-                    'overflow-hidden',
-                    'relative',
-                    'w-full',
-                    'h-0',
-                    {
-                        'pt-3/4': aspectRatio === '4:3',
-                        'pt-9/16': aspectRatio === '16:9'
-                    }
-                )}
-            >
+                className="overflow-hidden relative mx-auto w-full max-w-md"
+                style={{
+                    aspectRatio:
+                    aspectRatio === '9:16'
+                        ? '9 / 16'
+                        : aspectRatio === '16:9'
+                        ? '16 / 9'
+                        : aspectRatio === '4:3'
+                        ? '4 / 3'
+                        : '16 / 9',
+                    maxHeight: '50vh',
+                }}
+                >
                 <VideoComponent url={url} {...rest} hasAnnotations={!!fieldPath} />
             </div>
+
         </div>
     );
 }

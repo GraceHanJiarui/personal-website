@@ -43,7 +43,7 @@ export default function GenericSection(props) {
                 {hasTextContent && (
                     <div
                         className={classNames('w-full', {
-                            'w-[60%]': hasMedia && hasXDirection,
+                            'w-[70%]': hasMedia && hasXDirection,
                             'max-w-sectionBody': hasMedia && hasXDirection
                         })}
                     >
@@ -121,7 +121,7 @@ export default function GenericSection(props) {
                 )}
                 {hasMedia && (
                     <div
-                        className={classNames('flex', 'w-[40%]', mapStyles({ justifyContent: styles?.self?.justifyContent ?? 'flex-start' }), {
+                        className={classNames('flex', 'w-[30%]', mapStyles({ justifyContent: styles?.self?.justifyContent ?? 'flex-start' }), {
                             'max-w-sectionBody': media.__metadata.modelName === 'FormBlock',
                             // 'lg:w-[57.5%] lg:shrink-0': hasTextContent && hasXDirection,
                             // 'lg:mt-10': badge?.label && media.__metadata.modelName === 'FormBlock' && hasXDirection

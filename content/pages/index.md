@@ -15,10 +15,10 @@ sections:
     isLargeTitle: true
     subtitle: 
       en: |
-        📍 University of Waterloo | Computer Science, Honours, Co-op (Minor in Pure Math + Economics) | GPA 86.5/100 (3.7/4.0) | 2022-2027
+        📍 University of Waterloo | Computer Science, Honours, Co-op (Minor in Pure Math + Economics) | GPA 86.5/100 (3.7/4.0) | 2022-2026
         📧 j22han@uwaterloo.ca ｜ 📞 +1 (382)-889-3603
       zh: |
-        📍 滑铁卢大学 | 计算机科学（Co-op，本科，辅修纯数+经济）| GPA 86.5/100（3.7/4.0）| 2022-2027
+        📍 滑铁卢大学 | 计算机科学（Co-op，本科，辅修纯数+经济）| GPA 86.5/100（3.7/4.0）| 2022-2026
           📧 j22han@uwaterloo.ca ｜ 📞 +1 (382)-889-3603
     text: 
       en: |-
@@ -267,6 +267,18 @@ sections:
         self:
           textAlign: left
       type: TitleBlock
+    colors: bg-neutral-fg-dark
+
+  - type: GenericSection
+    title:
+      text: 
+        en: 2D Precision Platformer
+        zh: 2D精准跳跃平台游戏
+      color: text-dark
+      styles:
+        self:
+          textAlign: left
+      type: TitleBlock
     subtitle: 
       en: Indie Unity2D action game built from scratch with friends | Organizer / Lead Developer
       zh: 与朋友一起开发 Unity2D 独立游戏｜团队负责人 / 程序
@@ -318,6 +330,68 @@ sections:
         justifyContent: center
       subtitle:
         textAlign: left
+  - type: GenericSection
+    title:
+      text: 
+        en: TuneTrace
+        zh: 曲迹
+      color: text-dark
+      styles:
+        self:
+          textAlign: left
+      type: TitleBlock
+    subtitle: 
+      en: Mobile humming-to-MIDI App | Solo Developer
+      zh: 轻量化哼唱转 MIDI（移动端）｜个人独立开发
+    text:
+      en: |-
+        - Tch Stack: Flutter/Dart (cross-platform development), Python, FastAPI & CREPE/YIN（backend & Pitch Track), MusicXML/PDF rendering
+        - Solo project covering product, UI and audio/DSP; goal: a lightweight path from idea → editable MIDI.
+        - Implemented humming → baseline melody MIDI; piano-roll editing (add/move/resize notes, zoom/scroll, playhead)
+        - Pro exports: MIDI (Type 1), audio (WAV/MP3), and sheet music (PDF/MusicXML)..
+        - Current state: responsive UI; voice/piano modes; zoomable piano roll with add/move/resize/delete and snapping; multi-track overlay with main-track focus; playhead and basic transport; settings; export dialogs.
+        - Next week: smooth real-time pitch tracking, and complete MIDI/WAV export with the audio engine.
+        - Roadmap: automatic separation (melody/harmony/bass), quantize preview + undo, export presets & batch naming.
+      zh: |-
+        <ul class="sb-markdown mt-4">
+          <li>个人独立项目，负责产品、界面与音频/DSP，目标是提供“灵感→可编辑 MIDI”的轻量化路径。</li>
+          <li>实现哼唱→主旋律 MIDI 基线转换；提供 Piano-roll 基础编辑（增删/移动/拉伸音符，缩放/滚动，播放指示线）。</li>
+          <li>导出能力：MIDI（Type 1）、音频（WAV/MP3）、乐谱（PDF/MusicXML）</li>
+          <li>当前进度：已完成响应式 UI、人声/钢琴模式、可缩放的 piano-roll（添加/拖动/缩放/删除音符，吸附对齐）、多文件叠加与主文件切换、播放指示线与基础回放、设置面板、导出与帮助弹窗。</li>
+          <li>下一步（下周）：优化MIDI转化，完善 MIDI/WAV 导出 与音频引擎。</li>
+          <li>计划迭代：自动分轨（旋律/和声/低音）、量化预览与撤销、导出预设与批量命名。</li>
+        </ul>
+        <p class="text-m text-gray-600">技术栈：Flutter/Dart（跨平台开发）、Python, FastAPI & CREPE/YIN（后端&音高跟踪）、MusicXML/PDF 渲染</p>
+    actions: []
+    media:
+      title: Humm2MIDI Demo
+      url: /images/video_app.mp4
+      autoplay: true
+      loop: true
+      muted: true
+      controls: false
+      aspectRatio: '9:16'
+      styles:
+        self:
+          padding:
+            - pt-2
+            - pb-2
+            - pl-2
+            - pr-2
+          borderColor: border-dark
+          borderStyle: solid
+          borderWidth: 1
+          borderRadius: large
+      type: VideoBlock
+    elementId: humm2midi
+    colors: bg-neutral-fg-dark
+    styles:
+      self:
+        flexDirection: row-reverse
+        justifyContent: center
+      subtitle:
+        textAlign: left
+
   # start of big list
   # - title:
   #     text: 
